@@ -20,7 +20,7 @@ public class DBConnection {
     public DBConnection(){
        try{
            Class.forName("com.mysql.jdbc.Driver").newInstance();
-           conn = DriverManager.getConnection("jdbc:mysql://192.168.1.20:3306/costs?","jonas","pishare");
+           conn = DriverManager.getConnection("jdbc:mysql://192.168.1.20:3306/costs?","*","*");
            st = conn.createStatement();           
        } catch(ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e){
            JOptionPane.showMessageDialog(null,e);           
